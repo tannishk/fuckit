@@ -1,0 +1,64 @@
+<!-- Modal -->
+<md-dialog>
+  <md-dialog-content>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <span>Sign Up</span>
+              </div>
+            </md-toolbar>
+          </div>
+          <div class="modal-body" ng-controller="loginController">
+            <table>
+              <tr>
+                <td id="email" style="margin-bottom: 10px;">
+                  First Name:
+                </td>
+                <td>
+                  <input type="text" id="email" style="margin-bottom: 10px;"/>
+                </td>
+              </tr>
+              <tr>
+                <td id="email" style="margin-bottom: 10px;">
+                  Last Name:
+                </td>
+                <td>
+                  <input type="text" id="email" style="margin-bottom: 10px;"/>
+                </td>
+              </tr>
+              <tr>
+                <td id="email" style="margin-bottom: 10px;">
+                  Email:
+                </td>
+                <td>
+                  <input type="email" id="email" style="margin-bottom: 10px;"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Password:
+                </td>
+                <td>
+                  <input type="password" id="password"/ style="margin-bottom: 10px;">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Confirm Password:
+                </td>
+                <td>
+                  <input type="password" id="password"/>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click='login()'>Signup</button>
+          </div>
+        </div>
+  </md-dialog-content>
+</md-dialog>
