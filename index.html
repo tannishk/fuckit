@@ -30,23 +30,28 @@
       </button>
       <a class="navbar-brand" href="#">Brand</a>
     </div>
-    
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="loginController">
-      
-      
+
+
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <md-button type="button" class="btn btn-primary navbar-btn" ng-click="loginModal($event)"
-                     style="margin-right: 10px;">Login
+          <md-button type="button" class="md-warm" ng-click="loginModal($event)"
+                     style="margin-right: 10px;background-color: cornflowerblue;">Login
           </md-button>
         </li>
         <li>
-          <button type="button" class="btn btn-primary navbar-btn" style="color:white">Signup</button>
+          <md-button type="button" class="md-warm" ng-click="signupModal($event)"
+                  style="background-color: cornflowerblue;">Signup</md-button>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+  <div class="container">
+    <div ng-view>
+    </div>
+  </div>
 </nav>
 </div>
 </body>
