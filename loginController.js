@@ -36,4 +36,21 @@ fuckApp.controller('loginController',
         $location.path('/home');
       });
     };
+
+    $scope.register = function(){
+      var val = JSON.stringify({
+        "first_name":document.getElementById('firstName').value ,
+        "last_name":document.getElementById('lastName').value,
+        "email": document.getElementById('emailid').value,
+        "password": document.getElementById('spass').value
+      });
+
+      $http.post("http://139.59.19.144/py/polls/registration", val)
+      .then(function (response) {
+        console.log(response);
+        $location.path('/');
+      });
+
+    };
+
   });

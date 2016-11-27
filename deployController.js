@@ -1,4 +1,5 @@
-fuckApp.controller('deployController',function($scope,$mdDialog, $http, baseService, $location){
+fuckApp.controller('deployController',function($scope,$mdDialog, $http, baseService, $location, $rootScope){
+  $rootScope.url = $rootScope.url ? $rootScope.url : $rootScope.url = ''  ;
   $scope.deployModal = function (event) {
     console.log('modal called');
     $mdDialog.show({
@@ -24,10 +25,11 @@ fuckApp.controller('deployController',function($scope,$mdDialog, $http, baseServ
     // console.log(document.getElementById('password').value);
     $http.post("http://139.59.19.144/py/polls/request", val)
     .then(function (response) {
-      console.log(response);
+      console.log(1);
+      console.log(response.data.url);
+      $rootScope.url = response.data.url;
       baseService.deployData = response.data;
       $mdDialog.hide();
-      $location.path('/home');
     });
   };
 

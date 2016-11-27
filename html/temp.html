@@ -1,5 +1,6 @@
 <!-- Fixed navbar -->
-   <nav class="navbar navbar-inverse navbar-fixed-top">
+   <div ng-controller="deployController">
+     <nav class="navbar navbar-inverse navbar-fixed-top">
      <div class="container">
        <div class="navbar-header">
          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,7 +11,7 @@
          </button>
          <a class="navbar-brand">Simba</a>
        </div>
-       <div id="navbar" class="navbar-collapse collapse" ng-controller="deployController">
+       <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav">
            <li class="active"><a>{{ firstName }}</a></li>
          </ul>
@@ -23,3 +24,12 @@
        </div><!--/.nav-collapse -->
      </div>
    </nav>
+   <div>
+     <<md-card>
+       <md-card-content>
+         <h2>Deployed Url</h2>
+         <p>{{ url }}</p>
+       </md-card-content>
+     </md-card>
+   </div>
+</div>
