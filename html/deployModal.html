@@ -1,0 +1,45 @@
+<!-- Modal -->
+<md-dialog style="width: 25%;">
+  <md-dialog-content>
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <span>Deploy</span>
+              </div>
+            </md-toolbar>
+          </div>
+          <div class="modal-body" ng-controller="deployController">
+            <md-input-container class="md-block">
+              <label>Project Name</label>
+              <input id="projectName" type="text">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>GitHub URL</label>
+              <input id="url" type="text">
+            </md-input-container>
+            <md-input-container class= "md-block">
+              <md-select ng-model="request.lan" placeholder="Language" class="md-no-underline">
+                <md-option value="Java">Java</md-option>
+                <md-option value="Python">Python</md-option>
+              </md-select>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+              <md-select ng-model="request.framework" placeholder="FrameWork" class="md-no-underline">
+                <md-option value="Play">Play</md-option>
+                <md-option value="Django">Django</md-option>
+                <md-option value="Flask">Flask</md-option>
+              </md-select>
+            </md-input-container>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" ng-click='deploy()'>Deploy</button>
+            </div>
+          </div>
+
+        </div>
+  </md-dialog-content>
+</md-dialog>

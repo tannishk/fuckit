@@ -13,48 +13,22 @@
             </md-toolbar>
           </div>
           <div class="modal-body" ng-controller="loginController">
-            <table>
-              <tr>
-                <td id="email" style="margin-bottom: 10px;">
-                  First Name:
-                </td>
-                <td>
-                  <input type="text" id="email" style="margin-bottom: 10px;"/>
-                </td>
-              </tr>
-              <tr>
-                <td id="email" style="margin-bottom: 10px;">
-                  Last Name:
-                </td>
-                <td>
-                  <input type="text" id="email" style="margin-bottom: 10px;"/>
-                </td>
-              </tr>
-              <tr>
-                <td id="email" style="margin-bottom: 10px;">
-                  Email:
-                </td>
-                <td>
-                  <input type="email" id="email" style="margin-bottom: 10px;"/>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Password:
-                </td>
-                <td>
-                  <input type="password" id="password"/ style="margin-bottom: 10px;">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Confirm Password:
-                </td>
-                <td>
-                  <input type="password" id="password"/>
-                </td>
-              </tr>
-            </table>
+            <md-input-container class="md-block">
+              <label>First Name</label>
+              <input id="firstName" type="text">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Last Name</label>
+              <input id="lastName" type="text">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Email</label>
+              <input id="email" type="email">
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Password</label>
+              <input id="password" type="pasword">
+            </md-input-container>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" ng-click='login()'>Signup</button>

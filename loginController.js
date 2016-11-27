@@ -26,12 +26,12 @@ fuckApp.controller('loginController',
         "email": document.getElementById('email').value,
         "password": document.getElementById('password').value
       });
-      console.log(document.getElementById('email').value);
-      console.log(document.getElementById('password').value);
       $http.post("http://139.59.19.144/py/polls/login", val)
       .then(function (response) {
         console.log(response);
+        console.log(response.data.session_id);
         baseService.loginData = response.data;
+        localStorage.setItem('sessionId',response.data.session_id);
         $mdDialog.hide();
         $location.path('/home');
       });
