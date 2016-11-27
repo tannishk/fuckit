@@ -131,6 +131,7 @@ return Httpreq.responseText;
       chart.draw(data, options);
     }
   };
-
+if ($location.path() === '/analytics'){
   chart();
+}
 });
